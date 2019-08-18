@@ -1,17 +1,17 @@
 <nav class="navbar navbar-expand-lg fixed-static-top navbar-light bg-light">
   <div class="container-fluid">
-  <a class="navbar-brand mr-auto mr-lg-0" href="{{ route('root_path') }}">Laracarte</a>
+  <a class="navbar-brand mr-auto mr-lg-0" href="{{ route('root_path') }}">{{ config('app.name') }}</a>
   <button class="navbar-toggler p-0 border-0" type="button" data-toggle="offcanvas">
     <span class="navbar-toggler-icon"></span>
   </button>
 
   <div class="navbar-collapse offcanvas-collapse " id="navbarsExampleDefault">
     <ul class="navbar-nav mr-auto">
-      <li class="nav-item">
-        <a class="nav-link {{ set_active_route('root_path') }}" href="{{ route('root_path') }}">Home</a>
+      <li class="nav-item {{ set_active_route('root_path') }}">
+        <a class="nav-link" href="{{ route('root_path') }}">Home</a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link {{ set_active_route('about_path') }}" href="{{ route('about_path') }}">About</a>
+      <li class="nav-item {{ set_active_route('about_path') }}">
+        <a class="nav-link" href="{{ route('about_path') }}">About</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="#">Artisans</a>
